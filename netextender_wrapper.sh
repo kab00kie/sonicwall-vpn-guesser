@@ -19,7 +19,7 @@ i=1
 cat $userlist | while read user; do
 	cat $passwordlist | while read password; do
 		echo -e "${GREEN}Trying $user::$password${NC}"
-		./netextender_guess $user $password $domain $sslvpn
+		./netextender_guess.sh $user $password $domain $sslvpn
 
 
 		if [ $(expr $i % $attempts) -eq 0 ]; then
